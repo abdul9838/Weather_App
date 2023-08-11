@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+body {
+  background: linear-gradient(rgb(139, 197, 198), rgb(124, 70, 70));
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.container {
+  max-width: 1200px;
+  height: 100vh;
+  background: url(https://images.unsplash.com/photo-1545193544-312983719627?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.weather_data {
+  padding: 10px;
+  height: auto;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 20px;
+}
+i {
+  font-size: 60px;
+}
+form {
+  width: 100%;
+  margin-top: 10px;
+  height: 35px;
+  display: flex;
+}
+input {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0 5px;
+  width: 80%;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: white;
+}
+button {
+  height: 100%;
+  color: black;
+  padding: 0 5%;
+  border: none;
+  border-radius: 3px;
+}
+.weatherDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+img {
+  width: 120px;
+  margin-left: 10px;
+}
+.max_min {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+  .min {
+    padding-right: 30px;
+    border-right: 2px solid white;
   }
 }
