@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import React from 'react'
 
 // const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=89bb37687774ebcb51e4dc6216d16c14`;
 
@@ -17,7 +18,6 @@ const Weather = () => {
     },
   });
   const [city, setCity] = useState("delhi");
-  const [kiki, setkty] = useState("delhi");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,7 +44,7 @@ const Weather = () => {
         <p>{data.message} enter a valid city name.</p>
       ) : (
         <div className="weatherDetail">
-          <img src={`../image/${data.weather?.[0].main}.png`} alt="" />
+          <img src={process.env.PUBLIC_URL + `/image/${data.weather?.[0].main}.png`} alt="" />
           <h2>{data.name}</h2>
           <h1>{data.main.temp}</h1>
           <div className="type">
